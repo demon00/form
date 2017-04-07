@@ -1,0 +1,390 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	color: #231f20;
+	letter-spacing: -0.03em;
+}
+
+/*input style*/
+.input__style {
+	border: 1px solid #231f20;
+	width: 250px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: none;
+	padding: 5px;
+}
+
+.input__style::-webkit-input-placeholder {
+	opacity: 1;
+	transition: opacity 0.3s ease;
+	color: #231f20;
+}
+
+
+.input__style:focus::-webkit-input-placeholder {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.form__label {
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+.form__input_radio {
+	width: 21px;
+	height: 21px;
+	cursor: pointer;
+}
+
+.form__input_radio:not(checked) {
+	position: absolute;
+	opacity: 0;
+}
+
+.form__input_radio:not(checked) + .form__label{
+	position: relative;
+	padding: 1px 0 0 28px;
+}
+
+.form__input_radio:not(checked) + .form__label::before {
+	content: '';
+	position: absolute;
+	top: -1px;
+	left: 0;
+	width: 21px;
+	height: 21px;
+	border: 1px solid #231f20;
+	border-radius: 50%;
+	background: #FFF;
+}
+
+.form__input_radio:not(checked) + .form__label::after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 4px;
+	width: 7px;
+	height: 7px;
+	margin: 4px;
+	border-radius: 50%;
+	background: #000;
+	opacity: 0;
+	transition: all .2s;
+}
+
+.form__input_radio:checked + .form__label::after {
+	opacity: 1;
+}
+
+/*Checkbox Style*/
+
+.form__label-checkbox {
+	cursor: pointer;
+	margin-right: 25px;
+}
+
+.form__input_checkbox {
+	width: 21px;
+	height: 21px;
+	cursor: pointer;
+}
+
+.form__input_checkbox:not(checked) {
+	position: absolute;
+	opacity: 0;
+}
+
+.form__input_checkbox:not(checked) + .form__label-checkbox{
+	position: relative;
+	padding: 0 0 0 28px;
+}
+
+.form__input_checkbox:not(checked) + .form__label-checkbox::before {
+	content: '';
+	position: absolute;
+	top: -1px;
+	left: 0;
+	width: 21px;
+	height: 21px;
+	border: 1px solid #231f20;
+	background: #FFF;
+}
+
+.form__input_checkbox:not(checked) + .form__label-checkbox::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 2px;
+	width: 12px;
+	height: 12px;
+	margin: 4px;
+	background: url(../img/checkbox.png) no-repeat 0;
+	background-size: cover ;
+	opacity: 0;
+	transition: all .3s;
+}
+
+.form__input_checkbox:checked + .form__label-checkbox::after {
+	opacity: 1;
+}
+/*End Checkbox Style*/
+/*end Input style*/
+
+a {
+	text-decoration: none;
+}
+
+.form-container {
+	width: 100%;
+	background-color: #fff;
+}
+
+.form {
+	width: 250px;
+	margin: auto;
+}
+
+.form__valuation {
+	padding-top: 20px;
+}
+
+.form__valuation_caption {
+	font-size: 2.069em;
+	margin-bottom: 29px;
+	letter-spacing: 0.0124em;
+	color: #231f20;
+}
+
+.form__valuation_restor {
+	font-weight: 300;
+	float: left;
+	width: 100%;
+	letter-spacing: -0.017em;
+}
+
+.form__valuation_star-link {
+	width: 100%;
+}
+
+.form__valuation_star {
+	margin-top: 8px;
+	float: left;
+	margin-right: 14px;
+	width: 38px;
+	height: 37px;
+	background: url(../img/star-b.png) no-repeat center 0;
+	-moz-background-size: 100%;
+	-webkit-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+}
+
+.last_star {
+	margin-right: 0;
+}
+
+.form__valuation_star:hover {
+	background-position: center -37px;
+}
+
+.form__input-name {
+	margin-top: 46px;
+}
+
+.form__input-contact {
+	margin-top: 12px;
+}
+
+.form__input-comment {
+	margin-top: 12px;
+	height: 82px;
+}
+
+.form__input_question-one {
+	padding-top: 29px;
+}
+
+.form__input_question-one_answer {
+	margin-top: 9px;
+	height: 82px;
+}
+
+.form__input_male {
+	margin-top: 29px;
+}
+
+.form__input_male-question {
+	margin-bottom: 14px;
+	letter-spacing: -0.019em;
+}
+
+.form__input_age {
+	margin-top: 25px;
+	line-height: 2.5em;
+}
+
+.form__input_age-question {
+	letter-spacing: -0.019em;
+	margin-bottom: -4px;
+}
+
+.form__label-sec {
+	margin-left: 5px;
+}
+
+
+.form__input_like {
+	margin-top: 20px;
+	letter-spacing: -0.019em;
+}
+
+.form__input_like-question {
+	line-height: 1.5em;
+}
+
+.form__label-super {
+	display: block;
+	margin-top: 2px;
+	margin-bottom: -5px;
+}
+
+.form__input_like-question {
+	padding-bottom: 10px;
+}
+
+/*Vote*/
+
+.form__input_vote {
+	width: 100%;
+	margin-top: 32px;
+	height: 170px;
+	position: relative;
+}
+
+.vote__item {
+	float: left;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.vote__kitchen {
+	margin-right: 8px;
+}
+
+.vote__service {
+	margin-right: 8px;
+}
+
+.vote-name {
+	padding-bottom: 8px;
+}
+
+.vote__item-wrap {
+	width: 99px;
+	height: 30px;
+	border: 1px solid #000;
+	margin-right: 20px;
+	overflow: hidden;
+}
+
+.vote__link {
+	width: 49px;
+	float: left;
+	line-height: 30px;
+	font-weight: bold;
+	font-size: 24px;
+	letter-spacing: 0;
+	transition: all .3s ;
+	text-align: center;
+}
+
+.vote__item-wrap .vote__link:nth-child(2) {
+	line-height: 30px;
+	border-left: 1px solid #000;
+	margin-top: -2px;
+	padding-bottom: 2px;
+}
+
+.vote__link:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+/*End Vote*/
+
+/*Like service*/
+
+.form__input_like-service-question {
+	margin-bottom: 15px;
+}
+
+.form__label-yes {
+	margin-right: 17px;
+}
+/*End Like service*/
+
+/*What like*/
+.form__input_what-like {
+	padding-top: 30px;
+	line-height: 2.5em;
+}
+
+.form__input_what-like-question {
+	padding-bottom: 8px;
+	line-height: 1.5;
+}
+
+.form__label-checkbox-staff {
+	margin-top: 20px;
+}
+/*End What like*/
+
+/*Like-list*/
+.form__like-list {
+	margin-top: 22px;
+	margin-bottom: 20px;
+}
+
+.form__like-pop-up-list {
+	border: 1px solid #231f20;
+	width: 250px;
+	outline: none;
+	margin-top: 15px;
+}
+/*End Like-list*/
+
+/*Submit*/
+
+.form__submit_wrap {
+	width: 100%;
+	text-align: center;
+}
+
+.form__submit {
+	margin-top: 20px;
+	width: 192px;
+	height: 48px;
+	outline: none;
+	border: 1px solid #231f20;
+	background-color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.form__submit_error {
+	margin-top: 10px;
+	font-size: 13px;
+	line-height: 15px;
+	color: #d00862;
+}
+
+/*End Submit*/
+

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]>
+<html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]>
+<html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8"/>
+	<title>Form</title>
+	<meta name="description" content=""/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="shortcut icon" href="favicon.png"/>
+	<!--<link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css" />-->
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/media.css"/>
+	<link rel="stylesheet" href="libs/multiple-select.css">
+</head>
+<body>
+<!--Clientomer-form-->
+<!--form container-->
+<div class="form-container">
+	<!--form-->
+	<form class="form">
+		<section class="form__valuation">
+			<h1 class="form__valuation_caption">Оставьте отзыв</h1>
+			<span class="form__valuation_restor">Оцените наш ресторан</span>
+			<a href="#" class="form__valuation_star-link">
+				<div class="form__valuation_star"></div>
+			</a>
+			<a href="#" class="form__valuation_star-link">
+				<div class="form__valuation_star"></div>
+			</a>
+			<a href="#" class="form__valuation_star-link">
+				<div class="form__valuation_star"></div>
+			</a>
+			<a href="#" class="form__valuation_star-link">
+				<div class="form__valuation_star"></div>
+			</a>
+			<a href="#" class="form__valuation_star-link">
+				<div class="form__valuation_star last_star"></div>
+			</a>
+		</section>
+
+		<section class="form__input">
+			<!--Main info-->
+			<input type="text" tabindex="1" class="form__input-name input__style" placeholder="Имя">
+			<input type="text" tabindex="2" class="form__input-contact input__style" placeholder="Контакты">
+			<textarea tabindex="3" class="form__input-comment input__style" name="comment" id="comment__name" cols="30" rows="10"
+								placeholder="Ваш коментарий"></textarea>
+
+			<p class="form__input_question-one">Любой вопрос, ответ на который пишется в свободной форме&#63;</p>
+		<textarea tabindex="4" class="form__input_question-one_answer input__style" name="question-one" id="question-one_answer" cols="30"
+							rows="10"></textarea>
+		<!--End main info-->
+
+		<!--Male-->
+		<div class="form__input_male">
+			<p class="form__input_male-question">Укажите пожалуйста, ваш пол</p>
+				<input type="radio" id="man" name="male" class="form__input_radio">
+			<label tabindex="5" for="man" class="form__label">М
+			</label>
+			  <input type="radio" name="male" id="woman" class="form__input_radio">
+			<label tabindex="6" for="woman" class="form__label">Ж
+			</label>
+		</div>
+		<!--End Male-->
+
+		<!--Age-->
+			<div class="form__input_age">
+				<p class="form__input_age-question">Укажите пожалуйста, ваш возраст</p>
+				<input type="radio" id="little" name="age" class="form__input_radio">
+				<label tabindex="7" for="little" class="form__label">18&mdash;25</label>
+				<input type="radio" id="more-middle" name="age" class="form__input_radio">
+				<label tabindex="8" for="more-middle" class="form__label form__label-sec">40&mdash;45</label>
+				<br>
+				<input type="radio" id="middle" name="age" class="form__input_radio">
+				<label tabindex="9" for="middle" class="form__label">25&mdash;30</label>
+				<input type="radio" id="old" name="age" class="form__input_radio ">
+				<label tabindex="10" for="old" class="form__label form__label-sec">45&mdash;50</label>
+			</div>
+		<!--End Age-->
+
+    <!--Like-->
+		<div class="form__input_like">
+			<p class="form__input_like-question">Как вы охарактеризуете атмосферу в нашем заведение</p>
+				<input type="radio" id="super" name="atmos" class="form__input_radio ">
+			<label tabindex="11" for="super" class="form__label form__label-super">Супер</label>
+			<br>
+				<input type="radio" name="atmos" id="like" class="form__input_radio">
+			<label tabindex="12" for="like" class="form__label">Нравится</label>
+		</div>
+    <!--End Like-->
+
+		<!--Vote-->
+		<div class="form__input_vote">
+			<div class="vote__item vote__kitchen">
+				<p class="vote-name">Кухня</p>
+				<div class="vote__item-wrap">
+				<a tabindex="13" href="#" class="vote__link vote__kitchen-up">&#43;</a>
+				<a href="#" class="vote__link vote__kitchen-down">&ndash;</a>
+				</div>
+			</div>
+			<div class="vote__item vote__interior">
+				<p class="vote-name">Интерьер</p>
+				<div class="vote__item-wrap">
+				<a tabindex="14" href="#" class="vote__link vote__interior-up">&#43;</a>
+				<a href="#" class="vote__link vote__interior-down">&ndash;</a>
+				</div>
+			</div>
+			<div class="vote__item vote__service">
+				<p class="vote-name">Обслуживание</p>
+				<div class="vote__item-wrap">
+				<a tabindex="15" href="#" class="vote__link vote__service-up">&#43;</a>
+				<a href="#" class="vote__link vote__service-down">&ndash;</a>
+				</div>
+			</div>
+			<div class="vote__item vote__cost">
+				<p class="vote-name">Цена&#47;Качество</p>
+				<div class="vote__item-wrap">
+				<a tabindex="16" href="#" class="vote__link vote__cost-up">&#43;</a>
+				<a href="#" class="vote__link vote__cost-down">&ndash;</a>
+				</div>
+			</div>
+		</div>
+		<!--End Vote-->
+
+			<!--Like service-->
+			<div class="form__input_like-service">
+				<p class="form__input_like-service-question">Понравилось ли обслуживание&#63;</p>
+				<input type="radio" id="yes" name="service" class="form__input_radio">
+				<label tabindex="17" for="yes" class="form__label form__label-yes">Да</label>
+				<input type="radio" name="service" id="no" class="form__input_radio">
+				<label tabindex="18" for="no" class="form__label">Нет</label>
+			</div>
+			<!--End Like service-->
+
+			<!--What Like-->
+			<div class="form__input_what-like">
+				<p class="form__input_what-like-question">Что вам понравилось в нашем заведении&#63;</p>
+				<input type="checkbox" id="kitchen" name="what-like" class="form__input_checkbox">
+				<label tabindex="19" for="kitchen" class="form__label-checkbox">Кухня</label>
+				<br>
+				<input type="checkbox" name="what-like" id="staff" class="form__input_checkbox">
+				<label tabindex="20" for="staff" class="form__label-checkbox">Персонал</label>
+			</div>
+			<!--End What Like-->
+
+			<!--Like-list-->
+			<div class="form__like-list">
+				<p class="form__like-list-question">Что вам понравилось в нашем заведении&#63;</p>
+
+					<select tabindex="21" name="like-list" multiple="multiple" class="form__like-pop-up-list">
+						<option value="Кухня">Кухня</option>
+						<option value="Персонал">Персонал</option>
+						<option value="Музыка">Музыка</option>
+					</select>
+
+			</div>
+			<!--End Like-list-->
+     <!--Submit-->
+			<div class="form__submit_wrap">
+			<button tabindex="22" type="submit" value="submit" class="form__submit">Отправить</button>
+			<p class="form__submit_error js-hidden">Чтобы отправить отзыв, <br>
+				заполните все поля формы</p>
+			</div>
+     <!--End Submit-->
+		</section>
+	</form>
+	<!--End form-->
+</div>
+<!--End form container-->
+<!--End Clientomer-form-->
+<script src="libs/jquery.min.js"></script>
+<script src="libs/multiple-select.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
