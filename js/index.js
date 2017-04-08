@@ -1,19 +1,41 @@
-$(function () {
-  $('.form__like-pop-up-list').multipleSelect();
-});
+'use strict';
 
-// проверка формы перед отправкой
+let submit = document.querySelector('#button-submit');
 
-// let submit = document.querySelector('.form__submit');
+submit.onclick = function() {
 
-// submit.addEventListener('click', onSubmitClick.bind(this));
+  let radioSpan = document.querySelectorAll('.radio-buttons__text_radio');
 
-function onSubmitClick() {
-  let allInput = document.querySelectorAll('.input__style');
+  for(let b=0; b<radioSpan.length; b++) {               // цикл для добавление border radio
+    radioSpan[b].classList.add('js-radio-buttons_err');
+  }
 
-  console.log(allInput);
-}
+  let children = document.querySelectorAll('.radio-buttons__list');
 
-let elem = document.forms[0].elements;
+  for(let i=0; i<children.length; i++) {
+    let parrentInput = children[i].children;   // ul
 
-console.log(elem)
+    let captionsVote = children[i].parentElement.parentElement.previousElementSibling;
+
+    captionsVote.firstElementChild.classList.add('js-caption_error');  // добавление класса заголовоку блока
+
+    for(let k=0; k<parrentInput.length; k++) {
+
+      let inputs = parrentInput[k].firstElementChild;   // input
+
+      if(inputs.checked) {
+        for(let j=0; j<parrentInput.length; j++) {
+
+          let inputForRemoveClass = parrentInput[j].firstElementChild;
+
+          let spanRemoveClass = inputForRemoveClass.nextElementSibling.firstElementChild;  // span
+
+          spanRemoveClass.classList.remove('js-radio-buttons_err');
+          captionsVote.firstElementChild.classList.remove('js-caption_error');
+        }
+      }
+    }
+  }
+};
+
+
