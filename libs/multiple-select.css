@@ -2,6 +2,7 @@
     display: inline-block;
     position: relative;
     vertical-align: middle;
+    width: 250px !important;
 }
 
 .ms-choice {
